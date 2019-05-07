@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Oefening jQuery</title>
+    <meta name="author" content="Jan van der Henst">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="helden.js"></script>
+    <script src="node_modules/jquery-zoom/jquery.zoom.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#click').zoom({ on:'click' });
+      });
+    </script>
+    <style>
+      /* styles unrelated to zoom */
+      * { border:0; margin:0; padding:0; }
+      p { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
+
+      /* these styles are for the demo, but are not required for the plugin */
+      .zoom {
+        display:inline-block;
+        position: relative;
+        width: 555px;
+        height: 320px;
+        margin-left: 4em;
+        margin-bottom: 2em;
+      }
+
+      /* magnifying glass icon */
+      .zoom:after {
+        content:'';
+        display:block;
+        width:33px;
+        height:33px;
+        position:absolute;
+        top:0;
+        right:0;
+        background:url(node_modules/jquery-zoom/icon.png);
+      }
+
+      .zoom img {
+        display: block;
+      }
+
+      .zoom img::selection { background-color: transparent; }
+    </style>
+  </head>
+  <body>
+    <h1>Mijn helden</h1>
+    <main>
+      <section>
+        <h3>Nelson Mandela</h3>
+        <figure>
+          <img src="images/Nelson.jpeg" alt="Nelson Mandela">
+          <figcaption>president</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h3>Martin Luther King Jr.</h3>
+        <figure>
+          <img src="images/Martin.jpeg" alt="Martin Luther King Jr.">
+          <figcaption>activist</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h3>Albert Einstein</h3>
+        <figure>
+          <img src="images/Albert.jpg" alt="Albert Einstein">
+          <figcaption>wetenschapper</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h3>Napoleon</h3>
+        <figure>
+          <img src="images/Napoleon.jpeg" alt="Napoleon">
+          <figcaption>dictator</figcaption>
+        </figure>
+      </section>
+    </main>
+    <span class='zoom' id="click">
+      <img src="node_modules/jquery-zoom/daisy.jpg"  width='555' height='320' alt="de hond daisy">
+      <p>Click to zoom</p>
+    </span>
+    <footer>
+      <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+        <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+      </a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "jquery_training",
+  "version": "1.0.0",
+  "description": "training met theo",
+  "main": "helden.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jquery",
+    "jquery-zoom"
+  ],
+  "author": "Jan van der Henst",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-zoom": "^1.7.21"
+  }
+}
