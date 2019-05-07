@@ -1,2 +1,0 @@
-
-http://janvanderhenst.nl/jquery/
